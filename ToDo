@@ -1,0 +1,27 @@
+This is my ToDo list for my Block Game. Feel free to add ideas through the "Pull Requests" feature. I have it sorted by priority.
+
+*High*
+
+ - Make the camera move with the player
+ - Ability to resize the window
+ - Options Menu:
+    - FPS Limit
+    - Block Size
+  - Terrain
+  - Player
+    - Movement
+    - Collision Detection
+
+*Medium*
+
+  - FPS Counter
+  - X and Y Position Counter
+  - Inventory
+    - Place/Remove
+    - Stacks of 99
+  - Health
+
+*Low*
+
+
+
