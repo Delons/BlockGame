@@ -6,14 +6,14 @@ import javax.swing.JPanel;
 
 public class GUI extends JPanel {
 
-	Terrain terrain;
-	Paint paint;
+	private Terrain terrain;
+	private Paint paint;
 
-	int setFPS = 60;
+	private int setFPS = 60;
 	
-	Timer redraw = new Timer();
-	
+	private Timer redraw = new Timer();
 	private static GUI instance;
+	private JFrame f = new JFrame("Block Game");
 	
 	public static GUI getInstance(){
 		if(instance == null){
@@ -27,7 +27,7 @@ public class GUI extends JPanel {
 		paint = new Paint();
 	}
 
-	JFrame f = new JFrame("Block Game");
+	
 
 	public void draw() {
 

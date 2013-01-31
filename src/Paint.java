@@ -4,10 +4,10 @@ import javax.swing.JPanel;
 
 public class Paint extends JPanel {
 
-	Terrain terrain;
-	GUI gui;
+	private Terrain terrain;
+	private GUI gui;
 	
-	int lastTime, currentTime, fps;
+	private int lastTime, currentTime, fps;
 	
 	public Paint(){
 		terrain = new Terrain();

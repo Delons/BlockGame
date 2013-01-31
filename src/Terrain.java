@@ -1,8 +1,8 @@
 
 public class Terrain {
 
-	int blockSize = 15;
-	int[][] land;
+	private int blockSize = 15;
+	private int[][] land;
 	
 	public Terrain(){
 	}
