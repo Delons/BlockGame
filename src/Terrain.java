@@ -13,8 +13,6 @@ public class Terrain {
 		
 		land = new int[0][0];
 		
-		
-		
 	}
 	
 }

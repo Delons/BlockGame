@@ -1,3 +1,6 @@
+import java.util.Timer;
+import java.util.TimerTask;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -7,6 +10,11 @@ public class GUI extends JPanel {
 	Terrain terrain;
 	Paint paint;
 
+	int setFPS = 60;
+	int lastTime, currentTime, fps;
+	
+	Timer redraw = new Timer();
+	
 	public GUI(Main main) {
 		terrain = new Terrain(main);
 		paint = new Paint(main);
@@ -17,6 +25,8 @@ public class GUI extends JPanel {
 
 	public void draw() {
 
+		redraw.schedule(draw, setFPS, setFPS);
+		
 		f.setSize(500, 500);
 		f.setVisible(true);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -28,6 +38,12 @@ public class GUI extends JPanel {
 	f.add(mouse);
 	
 	f.add(paint);
+	
 	}
-
+	
+	TimerTask draw = new TimerTask(){
+		public void run(){
+			paint.repaint();
+		}
+	};
 }
