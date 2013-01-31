@@ -5,8 +5,7 @@ public class Main {
 	
 	public void startGame(){
 		
-		
-		gui.draw();
+		GUI.getInstance().draw();
 		
 	}
 		
