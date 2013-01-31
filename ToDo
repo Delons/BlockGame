@@ -4,13 +4,14 @@ This is my ToDo list for my Block Game. Feel free to add ideas through the "Pull
 
  - Make the camera move with the player
  - Ability to resize the window
- - Options Menu:
+ - Options Menu
     - FPS Limit
     - Block Size
   - Terrain
   - Player
     - Movement
     - Collision Detection
+    - Falling
 
 *Medium*
 
