@@ -8,21 +8,23 @@ public class Paint extends JPanel {
 	Terrain terrain;
 	GUI gui;
 	
+	int lastTime, currentTime, fps;
+	
 	public Paint(Main main){
 		this.main = main;
 		terrain = new Terrain(main);
-		gui = new GUI(main);
 	}
 	
 	public void paintComponent(Graphics g){
-		gui.lastTime = gui.currentTime;
-		gui.currentTime = (int) System.currentTimeMillis();
-		gui.fps = 1000 / (gui.currentTime - gui.lastTime);
+		
+		lastTime = currentTime;
+		currentTime = (int) System.currentTimeMillis();
+		fps = 1000 / (currentTime - lastTime);
 		
 		super.paintComponent(g);
 		
-		g.setColor(new Color(255, 255, 255));
-		g.drawString("FPS: " + gui.fps, 5, 5);
+		g.setColor(Color.BLACK);
+		g.drawString("FPS: " + fps, 5, 10);
 		
 	}
 	

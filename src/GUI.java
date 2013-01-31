@@ -11,7 +11,6 @@ public class GUI extends JPanel {
 	Paint paint;
 
 	int setFPS = 60;
-	int lastTime, currentTime, fps;
 	
 	Timer redraw = new Timer();
 	
@@ -25,7 +24,7 @@ public class GUI extends JPanel {
 
 	public void draw() {
 
-		redraw.schedule(draw, setFPS, setFPS);
+		redraw.schedule(draw, 1000 / setFPS, 1000 / setFPS);
 		
 		f.setSize(500, 500);
 		f.setVisible(true);
@@ -43,7 +42,7 @@ public class GUI extends JPanel {
 	
 	TimerTask draw = new TimerTask(){
 		public void run(){
-			paint.repaint();
+			f.repaint();
 		}
 	};
 }
