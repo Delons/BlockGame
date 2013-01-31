@@ -2,7 +2,7 @@
 public class Terrain {
 
 	Main main;
-	final int blockSize = 15;
+	int blockSize = 15;
 	int[][] land;
 	
 	public Terrain(Main main){
