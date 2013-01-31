@@ -9,14 +9,15 @@ public class GUI extends JPanel {
 	Main main;
 	Terrain terrain;
 	Paint paint;
+	GUI gui;
 
 	int setFPS = 60;
 	
 	Timer redraw = new Timer();
 	
-	public GUI(Main main) {
-		terrain = new Terrain(main);
-		paint = new Paint(main);
+	public GUI(Main main, GUI gui) {
+		terrain = new Terrain(main, this);
+		paint = new Paint(main, this);
 		this.main = main;
 	}
 
