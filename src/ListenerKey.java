@@ -5,7 +5,6 @@ import javax.swing.JPanel;
 public class ListenerKey extends JPanel implements KeyListener {
 
 	public void keyPressed(KeyEvent arg0) {
-		// TODO Auto-generated method stub
 
 	}
 
