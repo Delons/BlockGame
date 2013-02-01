@@ -3,9 +3,6 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 public class Paint extends JPanel {
-
-	private Terrain terrain;
-	private GUI gui;
 	
 	private int lastTime, currentTime, fps;
 	
@@ -19,7 +16,6 @@ public class Paint extends JPanel {
 	}
 	
 	public Paint(){
-		terrain = new Terrain();
 	}
 	
 	public void paintComponent(Graphics g){

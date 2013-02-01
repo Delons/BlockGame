@@ -5,9 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class GUI extends JPanel {
-
-	private Terrain terrain;
-
+	
 	private int setFPS = 60;
 	
 	private Timer redraw = new Timer();
@@ -21,12 +19,6 @@ public class GUI extends JPanel {
 		return instance;
 	}
 	
-	public GUI() {
-		terrain = new Terrain();
-	}
-
-	
-
 	public void draw() {
 
 		redraw.schedule(draw, 1000 / setFPS, 1000 / setFPS);
