@@ -7,7 +7,6 @@ import javax.swing.JPanel;
 public class GUI extends JPanel {
 
 	private Terrain terrain;
-	private Paint paint;
 
 	private int setFPS = 60;
 	
@@ -24,7 +23,6 @@ public class GUI extends JPanel {
 	
 	public GUI() {
 		terrain = new Terrain();
-		paint = new Paint();
 	}
 
 	
@@ -43,7 +41,7 @@ public class GUI extends JPanel {
 	f.add(key);
 	f.add(mouse);
 	
-	f.add(paint);
+	f.add(Paint.getInstance());
 	
 	}
 	

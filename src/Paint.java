@@ -9,6 +9,15 @@ public class Paint extends JPanel {
 	
 	private int lastTime, currentTime, fps;
 	
+	private static Paint paint;
+	public static Paint getInstance()
+	{
+		if(paint == null){
+			paint = new Paint();
+		}
+		return paint;
+	}
+	
 	public Paint(){
 		terrain = new Terrain();
 	}
