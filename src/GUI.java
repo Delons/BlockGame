@@ -1,6 +1,6 @@
 import java.util.Timer;
 import java.util.TimerTask;
-
+import java.awt.*;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -10,6 +10,7 @@ public class GUI extends JPanel {
 	
 	private Timer redraw = new Timer();
 	private static GUI instance;
+
 	private JFrame f = new JFrame("Block Game");
 	int fX = 500, fY = 500;
 	
@@ -32,9 +33,9 @@ public class GUI extends JPanel {
 	ListenerMouse mouse = new ListenerMouse();
 	ListenerComponent component = new ListenerComponent();
 	
-	f.add(key);
-	f.add(mouse);
-	f.add(component);
+	f.addKeyListener(key);
+	f.addMouseListener(mouse);
+	f.addComponentListener(component);
 	
 	f.add(Paint.getInstance());
 	
@@ -57,4 +58,13 @@ public class GUI extends JPanel {
 	public void setfY(int fY) {
 		this.fY = fY;
 	}
+	
+	public int getfX() {
+		return fX;
+	}
+
+	public int getfY() {
+		return fY;
+	}
+	
 }

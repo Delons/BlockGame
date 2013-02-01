@@ -11,7 +11,7 @@ public class ListenerKey extends JPanel implements KeyListener {
 		int key = e.getKeyCode();
 
 		if (key == KeyEvent.VK_F1) {
-			
+		
 				if(paint.isShowStats() == true){
 					paint.setShowStats(false);
 				} else {
