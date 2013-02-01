@@ -7,7 +7,7 @@ public class Paint extends JPanel {
 	public boolean showStats = false;
 
 	private GUI gui = GUI.getInstance();
-	
+
 	public boolean isShowStats() {
 		return showStats;
 	}
@@ -41,12 +41,15 @@ public class Paint extends JPanel {
 		super.paintComponent(g);
 
 		if (showStats == true) {
-			
 			g.setColor(Color.BLACK);
+			
+			
 			g.drawString("FPS: " + fps, 5, 15);
-			g.drawString("Frame Size: X: " + gui.getfX() + " Y: " + gui.getfY(), 75, 15);
+			
+			g.drawString(
+					"Frame Size: X: " + gui.getfX() + " Y: " + gui.getfY(), 75,
+					15);
 			g.drawString("Char Pos: ", 300, 15);
 		}
 	}
-
 }

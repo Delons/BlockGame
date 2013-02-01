@@ -16,7 +16,7 @@ public class ListenerComponent extends JPanel implements ComponentListener{
 		
 	}
 
-	public void componentResized(ComponentEvent e) {
+	public void componentResized(ComponentEvent e) {		
 		gui.setfX(gui.getF().getSize().width);
 		gui.setfY(gui.getF().getSize().height);
 	}
