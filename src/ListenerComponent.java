@@ -1,30 +1,27 @@
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 
+import javax.swing.JPanel;
 
-public class ListenerComponent implements ComponentListener{
 
-	@Override
-	public void componentHidden(ComponentEvent arg0) {
-		// TODO Auto-generated method stub
+public class ListenerComponent extends JPanel implements ComponentListener{
+
+	private GUI gui = GUI.getInstance();
+	
+	public void componentHidden(ComponentEvent e) {
+
+	}
+
+	public void componentMoved(ComponentEvent e) {
 		
 	}
 
-	@Override
-	public void componentMoved(ComponentEvent arg0) {
-		// TODO Auto-generated method stub
-		
+	public void componentResized(ComponentEvent e) {
+		gui.setfX(gui.getF().getSize().width);
+		gui.setfY(gui.getF().getSize().height);
 	}
 
-	@Override
-	public void componentResized(ComponentEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void componentShown(ComponentEvent arg0) {
-		// TODO Auto-generated method stub
+	public void componentShown(ComponentEvent e) {
 		
 	}
 

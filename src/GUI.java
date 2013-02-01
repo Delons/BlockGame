@@ -11,6 +11,7 @@ public class GUI extends JPanel {
 	private Timer redraw = new Timer();
 	private static GUI instance;
 	private JFrame f = new JFrame("Block Game");
+	int fX = 500, fY = 500;
 	
 	public static GUI getInstance(){
 		if(instance == null){
@@ -29,17 +30,31 @@ public class GUI extends JPanel {
 		
 	ListenerKey key = new ListenerKey();
 	ListenerMouse mouse = new ListenerMouse();
+	ListenerComponent component = new ListenerComponent();
 	
 	f.add(key);
 	f.add(mouse);
+	f.add(component);
 	
 	f.add(Paint.getInstance());
 	
 	}
-	
+
 	TimerTask draw = new TimerTask(){
 		public void run(){
 			f.repaint();
 		}
-	};
+	};	
+	
+	public JFrame getF() {
+		return f;
+	}
+
+	public void setfX(int fX) {
+		this.fX = fX;
+	}
+
+	public void setfY(int fY) {
+		this.fY = fY;
+	}
 }
