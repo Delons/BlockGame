@@ -3,8 +3,9 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 public class Paint extends JPanel {
-	
-	public boolean showStats;
+
+	public boolean showStats = false;
+
 	public boolean isShowStats() {
 		return showStats;
 	}
@@ -14,32 +15,33 @@ public class Paint extends JPanel {
 	}
 
 	private int lastTime, currentTime, fps;
-	
+
 	private static Paint paint;
-	public static Paint getInstance()
-	{
-		if(paint == null){
+
+	public static Paint getInstance() {
+		if (paint == null) {
 			paint = new Paint();
 		}
 		return paint;
 	}
-	
-	public Paint(){
+
+	public Paint() {
 	}
-	
-	public void paintComponent(Graphics g){
-		
+
+	public void paintComponent(Graphics g) {
+
 		lastTime = currentTime;
 		currentTime = (int) System.currentTimeMillis();
-		if(currentTime - lastTime != 0){
+		if (currentTime - lastTime != 0) {
 			fps = 1000 / (currentTime - lastTime);
 		}
-		
+
 		super.paintComponent(g);
-		
-		g.setColor(Color.BLACK);
-		g.drawString("FPS: " + fps, 5, 10);
-		
+
+		if (showStats == true) {
+			g.setColor(Color.BLACK);
+			g.drawString("FPS: " + fps, 5, 10);
+		}
 	}
-	
+
 }
