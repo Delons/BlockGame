@@ -4,6 +4,15 @@ import javax.swing.JPanel;
 
 public class Paint extends JPanel {
 	
+	public boolean showStats;
+	public boolean isShowStats() {
+		return showStats;
+	}
+
+	public void setShowStats(boolean showStats) {
+		this.showStats = showStats;
+	}
+
 	private int lastTime, currentTime, fps;
 	
 	private static Paint paint;
