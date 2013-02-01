@@ -22,7 +22,9 @@ public class Paint extends JPanel {
 		
 		lastTime = currentTime;
 		currentTime = (int) System.currentTimeMillis();
-		fps = 1000 / (currentTime - lastTime);
+		if(currentTime - lastTime != 0){
+			fps = 1000 / (currentTime - lastTime);
+		}
 		
 		super.paintComponent(g);
 		
