@@ -1,1 +1,2 @@
-Testing
+Game Plan Template
+========
